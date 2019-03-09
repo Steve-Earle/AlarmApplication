@@ -1,0 +1,73 @@
+/*
+ *
+ * Steve Earle
+ * 12:45 AM December 20th 2018
+ *
+ * Class/view for creating a new alarm object
+ * Includes:
+ *  -A toolbar with a back button to the MainActivity view
+ *  -An editText for alarm naming
+ *  -A date picker that also allows for selection of weekdays for alarm repetition
+ *  -A scrolling time picker
+ *  -A button that fires an intent to an alarm tone selection view,
+ *  -A volume bar
+ *  -A button that fires an intent to a snooze preference selection view
+ *  -A button that fires an intent to an avatar selection view
+ *  -A button that fires an intent to a theme selection view
+ *  -A button to save the new alarm with selected settings
+ *  -A button to cancel creation
+ *
+ * */
+
+package com.example.alarmapplication;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class NewAlarm extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_alarm);
+    }
+
+    /** Called when user taps the date button */
+    public void openNewAlarmDatePicker(View view) {
+        Intent intent = new Intent(this, NewAlarmDate.class);
+        startActivity(intent);
+    }
+
+    /** Called when user taps the time button */
+    public void openNewAlarmTimePicker(View view) {
+        Intent intent = new Intent(this, NewAlarmTime.class);
+        startActivity(intent);
+    }
+
+    /** Called when user taps the Tone button */
+    public void openNewAlarmTonePicker(View view) {
+        Intent intent = new Intent(this, NewAlarmTone.class);
+        startActivity(intent);
+    }
+
+    /** Called when user taps the Snooze button */
+    public void openNewAlarmSnoozePicker(View view) {
+        Intent intent = new Intent(this, NewAlarmSnooze.class);
+        startActivity(intent);
+    }
+
+    /** Called when user taps the Avatar button */
+    public void openNewAlarmAvatarPicker(View view) {
+        Intent intent = new Intent(this, NewAlarmAvatar.class);
+        startActivity(intent);
+    }
+
+    /** Called when user taps the Theme button */
+    public void openNewAlarmThemePicker(View view) {
+        Intent intent = new Intent(this, NewAlarmTheme.class);
+        startActivity(intent);
+    }
+}
