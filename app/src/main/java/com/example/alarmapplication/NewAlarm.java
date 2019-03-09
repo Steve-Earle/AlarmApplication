@@ -12,8 +12,6 @@
  *  -A button that fires an intent to an alarm tone selection view,
  *  -A volume bar
  *  -A button that fires an intent to a snooze preference selection view
- *  -A button that fires an intent to an avatar selection view
- *  -A button that fires an intent to a theme selection view
  *  -A button to save the new alarm with selected settings
  *  -A button to cancel creation
  *
@@ -56,18 +54,6 @@ public class NewAlarm extends AppCompatActivity {
     /** Called when user taps the Snooze button */
     public void openNewAlarmSnoozePicker(View view) {
         Intent intent = new Intent(this, NewAlarmSnooze.class);
-        startActivity(intent);
-    }
-
-    /** Called when user taps the Avatar button */
-    public void openNewAlarmAvatarPicker(View view) {
-        Intent intent = new Intent(this, NewAlarmAvatar.class);
-        startActivity(intent);
-    }
-
-    /** Called when user taps the Theme button */
-    public void openNewAlarmThemePicker(View view) {
-        Intent intent = new Intent(this, NewAlarmTheme.class);
         startActivity(intent);
     }
 }
