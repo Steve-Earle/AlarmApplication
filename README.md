@@ -17,4 +17,4 @@ Active user events keep the user engaged long enough to become fully awake and m
 
 ## Notes
 
-Snoozer is a simple application for anyone with a difficulty waking up. I made it for myself and have found it to helpful in getting myself started in the morning. Hopefully you will too.
+Snoozer is completely free. It is a simple application designed for anyone with a difficulty waking up. I made it for myself and have found it to be helpful in getting up and started in the morning. Hopefully you will too.
