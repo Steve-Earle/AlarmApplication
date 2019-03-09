@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Alarm Application</string>
+    <string name="app_name">Snoozer</string>
     <string name="new_alarm_page_name">New Alarm</string>
     <string name="new_alarm_date_page_name">Date</string>
     <string name="new_alarm_time_page_name">Time</string>
