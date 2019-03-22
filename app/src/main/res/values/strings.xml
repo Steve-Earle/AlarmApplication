@@ -5,7 +5,8 @@
     <string name="new_alarm_time_page_name">Time</string>
     <string name="new_alarm_tone_page_name">Alarm Tone</string>
     <string name="new_alarm_snooze_page_name">Snooze</string>
-    <string name="add_alarm_toolbar_button">Action Add</string>
+    <string name="add_alarm_toolbar_button">Add Alarm</string>
+    <string name="settings_toolbar_button">Settings</string>
     <string name="button_send">+</string>
 
     <string name="alarm_name_hint">Enter alarm name...</string>

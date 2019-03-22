@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,9 +41,23 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    /** Called when the user taps the Send button */
-    public void openNewAlarmView(View view) {
-        Intent intent = new Intent(this, NewAlarm.class);
-        startActivity(intent);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings:
+                Intent intent = new Intent(this, NewAlarm.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.add_alarm:
+                Intent intent2 = new Intent(this, NewAlarm.class);
+                startActivity(intent2);
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }
