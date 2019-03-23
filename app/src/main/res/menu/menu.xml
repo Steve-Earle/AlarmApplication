@@ -1,14 +1,20 @@
+<!--
+ Steve Earle
+ 1:08 PM March 23rd 2019
+
+ This XML defines buttons for the application toolbars
+-->
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- "Mark Favorite", should appear as action button if possible -->
+    <!-- MainActivity Toolbar -->
     <item
         android:id="@+id/add_alarm"
         android:icon="@drawable/ic_action_name"
         android:title="@string/add_alarm_toolbar_button"
         app:showAsAction="ifRoom"/>
 
-    <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/settings"
         android:title="@string/settings_toolbar_button"
         app:showAsAction="never"/>

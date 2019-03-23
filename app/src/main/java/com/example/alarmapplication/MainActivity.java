@@ -1,15 +1,13 @@
 /*
- *
  * Steve Earle
  * 12:32 AM December 20th 2018
  *
  * Main class and program entry point
  * Includes:
- *  -A toolbar with two tabs: Alarms (this) and Avatars
+ *  -A toolbar with two buttons (New Alarm and Overflow)
  *  -Current alarms (if any)
- *  -A floating action button that fires a new intent leading to the NewAlarm
- *   view where a user can create a new instance of an alarm
  *
+ * Some code referenced from guides.codepath.com and developer.android.com
  * */
 
 package com.example.alarmapplication;
@@ -25,6 +23,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    /** On application start the view is set to activity_main and the custom toolbar is set */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,31 +32,26 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
     }
 
-    // Menu icons are inflated just as they were with actionbar
+    /** Menu icons are inflated */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    /** Sets intents for toolbar buttons */
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.settings:
+                return true;
+
+            case R.id.add_alarm:
                 Intent intent = new Intent(this, NewAlarm.class);
                 startActivity(intent);
                 return true;
 
-            case R.id.add_alarm:
-                Intent intent2 = new Intent(this, NewAlarm.class);
-                startActivity(intent2);
-                return true;
-
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
-
         }
     }
 }
