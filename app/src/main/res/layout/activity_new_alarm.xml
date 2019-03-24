@@ -17,6 +17,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/new_alarm_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
             <EditText
                 android:id="@+id/editTextNewAlarmName"
                 android:layout_width="match_parent"
@@ -94,20 +107,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnNewAlarmTone" />
 
-            <SeekBar
-                android:id="@+id/seekBarVolume"
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnNewAlarmTheme" />
-
             <Button
                 android:id="@+id/btnNewAlarmSave"
                 android:layout_width="match_parent"
@@ -127,6 +126,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
+                android:onClick="cancelNewAlarm"
                 android:text="@string/new_alarm_page_cancel_button"
                 tools:layout_editor_absoluteX="222dp"
                 tools:layout_editor_absoluteY="478dp" />
